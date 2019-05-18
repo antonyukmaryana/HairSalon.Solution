@@ -1,0 +1,20 @@
+@using HairSalon.Models;
+@using System;
+@{
+  Layout = "_Layout";
+}
+
+<h1>Clients</h1>
+
+@if (Model.Count == 0)
+{
+  <h3>No clients.</h3>
+}
+@foreach(var client in Model)
+{
+  <ul>
+    <li>@client.GetInfo()</li>
+  </ul>
+}
+<p><a href='clients/new?stylistId=@Context.Request.Query["stylistId"]'>add a new clients</a></p>
+<p><a href='/'>Return to Main Page</a></p>

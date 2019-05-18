@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/css/style.css">
-    <title>HairSalon</title>
-</head>
-<body>
-    @RenderBody()
-</body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Snappy Snips</title>
+    <link rel='stylesheet' href='https:maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="~/css/styles.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header jumbotron">
+        <h1>Snappy Snips</h1>
+
+      </div>
+      <div class="nav">
+        <a href="/">Home</a><br>
+        <a href="/stylists">All Stylists</a><br>
+        <a href="/services">All Services</a><br>
+
+      </div>
+      <div class="main">
+        @RenderBody()
+      </div>
+    </div>
+  </body>
 </html>
