@@ -1,20 +1,37 @@
 @using HairSalon.Models;
 @using System;
 @{
-  Layout = "_Layout";
+    Layout = "_Layout";
 }
 
 <h1>All our Stylists</h1>
 
 @if (Model.Count == 0)
 {
-  <h3>No stylists are available.</h3>
+    <h3>No stylists are available.</h3>
 }
-@foreach(var stylist in Model)
+@foreach (var stylist in Model)
 {
-  <ul>
-    <li><a href="/clients?stylistId=@stylist.GetId()">@stylist.GetName() - @stylist.GetDescription()</a></li>
-  </ul>
+    <ul>
+        <li>
+            <a href="/clients?stylistId=@stylist.Id">@stylist.Name</a> 
+            <a href="/stylists/delete?id=@stylist.Id">delete</a>
+            <a href="/stylists/update?id=@stylist.Id">edit</a>
+            <p>
+                Specialties:
+                <ul>
+                    @foreach (var specialty in stylist.Specialties)
+                    {
+                        <li>@specialty.Name</li>
+                    }
+                </ul>
+            </p>
+        </li>
+    </ul>
 }
-<p><a href='stylists/new'>add a new stylist</a></p>
-<p><a href='/'>Return to Main Page</a></p>
+<p>
+    <a href='stylists/new'>add a new stylist</a>
+</p>
+<p>
+    <a href='/'>Return to Main Page</a>
+</p>

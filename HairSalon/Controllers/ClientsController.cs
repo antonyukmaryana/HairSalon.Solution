@@ -20,10 +20,21 @@ namespace HairSalon.Controllers
     }
 
     [HttpPost("/clients/new")]
-    public ActionResult Create(string info, int stylistId)
+    public ActionResult Create(string name, int stylistId)
     {
-      Client client = new Client(info, stylistId, 0);
+      Client client = new Client();
+      client.Name = name;
+      client.StylistId = stylistId;
       client.Save();
+      List<Client> allClients = Client.GetAll(stylistId);
+      return View("Index", allClients);
+    }
+    
+    [HttpGet("/clients/delete")]
+    public ActionResult Delete(int id, int stylistId)
+    {
+      Client.Delete(id);
+      
       List<Client> allClients = Client.GetAll(stylistId);
       return View("Index", allClients);
     }

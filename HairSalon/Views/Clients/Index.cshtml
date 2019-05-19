@@ -13,7 +13,7 @@
 @foreach(var client in Model)
 {
   <ul>
-    <li>@client.GetInfo()</li>
+    <li>@client.Name <a href="/clients/delete?id=@client.Id&stylistId=@client.StylistId">delete</a></li>
   </ul>
 }
 <p><a href='clients/new?stylistId=@Context.Request.Query["stylistId"]'>add a new clients</a></p>

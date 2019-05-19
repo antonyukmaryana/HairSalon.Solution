@@ -1,0 +1,17 @@
+@using HairSalon.Models;
+@{
+    Layout = "_Layout";
+}
+<h1> We are happy to welcome you at our Hair Salon</h1>
+<h2>Please enter information.</h2>
+
+<form action='/specialities/new' method='post'>
+
+    <label for='name'>Enter specialty name:</label>
+    <input id='name' name='name' type='text'>
+    <button type='submit'>Add specialty</button>
+</form>
+
+<p>
+    <a href='/'>Return to Main Page</a>
+</p>

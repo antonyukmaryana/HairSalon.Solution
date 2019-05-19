@@ -1,0 +1,35 @@
+@using HairSalon.Models;
+@using System;
+@{
+    Layout = "_Layout";
+}
+
+<h1>All our specialities</h1>
+
+@if (Model.Count == 0)
+{
+    <h3>No specialities are available.</h3>
+}
+@foreach (var specialty in Model)
+{
+    <ul>
+        <li>
+            <a href="/specialities?id=@specialty.Id">@specialty.Name</a>
+            <p>
+                Stylists:
+                <ul>
+                    @foreach (var stylist in specialty.Stylists)
+                    {
+                        <li>@stylist.Name</li>
+                    }
+                </ul>
+            </p>
+        </li>
+    </ul>
+}
+<p>
+    <a href='specialities/new'>add a new specialty</a>
+</p>
+<p>
+    <a href='/'>Return to Main Page</a>
+</p>
