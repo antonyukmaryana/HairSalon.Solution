@@ -1,26 +1,15 @@
 # HairSalon.Solution
 
 
-#### MVC web application for a hair salon. The owner should be able to add a list of the stylists, and for each stylist, add clients who see that stylist. The stylists work independently, so each client only belongs to a single stylist. 5/17/19
+#### MVC web application for a hair salon. The site to have full CRUD functionality for both stylists and clients. Its able to keep track of stylists' specialties with a many-to-many relationship between stylists and specialties since each stylist can have many specialties and many stylists can have the same specialty.
+
+ 5/17/19
 
 #### By **Maryana Antonyuk**
 
 ## Description
-Hair Salon
- MVC web application for a hair salon. The owner should be able to add a list of the stylists, and for each stylist, add clients who see that stylist. The stylists work independently, so each client only belongs to a single stylist.
+A salon employee is able to see a list of all our stylists, to select a stylist, see their details, and see a list of all clients that belong to that stylist, add new stylists to our system when they are hired, to add new clients to a specific stylist, to delete stylists (all and single), to delete clients (all and single),to view clients (all and single), to edit  the name of a stylist, to edit ALL of the information for a client, to add a specialty and view all specialties that have been added, to add a specialty to a stylist, to click on a specialty and see all of the stylists that have that specialty, to see the stylist's specialties on the stylist's details page, to add a stylist to a specialty.
 
-User Stories
-As a salon employee, I need to be able to see a list of all our stylists.
-As an employee, I need to be able to select a stylist, see their details, and see a list of all clients that belong to that stylist.
-As an employee, I need to add new stylists to our system when they are hired.
-As an employee, I need to be able to add new clients to a specific stylist. I should not be able to add a client if no stylists have been added.
-
-
-### Specs
-| Spec | Input | Output |
-| :-------------     | :------------- | :------------- |
-| **Homepage** |  | Homepage with Welcome and link to a form|
-|
 
 ## Setup/Installation Requirements
 
